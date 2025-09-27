@@ -241,3 +241,122 @@ nav {
 .about-text strong {
     color: #00ff88;
 }
+
+
+#tour-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#tour-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#tour-tooltip {
+  position: fixed;
+  background: #1a1a1a;
+  border: 2px solid #00ff88;
+  padding: 15px;
+  border-radius: 10px;
+  color: #fff;
+  z-index: 1000;
+  width: 250px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+}
+
+#tour-tooltip.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.tour-highlight {
+  box-shadow: 0 0 15px #00ff88, 0 0 25px #00ff88 inset;
+  transition: box-shadow 0.3s ease;
+  border-radius: 5px;
+}
+
+
+#tour-tooltip.active {
+  animation: bounceIn 0.3s forwards;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+
+#tour-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #00ff88;
+  color: #0d0d0d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00ff88, 0 0 25px #00ff88 inset;
+  z-index: 10000; /* make sure it's above everything */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#tour-button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px #00ff88, 0 0 40px #00ff88 inset;
+}
+
+.tour-buttons button {
+    padding: 10px 20px;
+    border: 2px solid #00ff88;
+    border-radius: 8px;
+    background: transparent;
+    color: #00ff88;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.tour-buttons button:hover {
+    background-color: #121212;
+    color: #00ff88;
+    box-shadow: 0 0 10px #00ff88;
+    transform: scale(1.05);
+}
+
+.tour-buttons button:active {
+    transform: scale(0.95);
+}
+
+
+.tour-buttons {
+    display: flex;
+    justify-content: space-between; /* spreads buttons evenly */
+    gap: 10px; /* space between buttons */
+    margin-top: 10px;
+    flex-wrap: nowrap; /* prevent wrapping to next line */
+}
+
+
+#tour-tooltip {
+    width: 280px; /* increase width if needed */
+}
+
+.tour-buttons button {
+    flex: 1; /* makes buttons evenly stretch in one line */
+    text-align: center;
+}
