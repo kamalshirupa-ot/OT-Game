@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin - WordQuest 5</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <div class="logo">WordQuest <span>5</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+    </div>
+  </nav>
+
+  <section class="form-section">
+    <h2>Admin Login</h2>
+    <form id="adminLogin">
+    <input type="text" name="username" placeholder="Admin Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button type="submit" class="btn">Login</button>
+
+    <p class="alt-link">
+        No account?
+        <a href="register.html">Click here to register</a>
+    </p>
+    </form>
+  </section>
+
+  <section id="adminPanel" class="hidden">
+    <h2>Reports</h2>
+    <div class="report">
+      <h3>Daily Report</h3>
+      <input type="date" id="reportDate">
+      <button class="btn" onclick="getDailyReport()">View</button>
+      <div id="dailyReportResult"></div>
+    </div>
+
+    <div class="report">
+      <h3>User Report</h3>
+      <input type="text" id="reportUser" placeholder="Username">
+      <button class="btn" onclick="getUserReport()">View</button>
+      <div id="userReportResult"></div>
+    </div>
+  </section>
+</body>
+</html>

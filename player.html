@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Player - WordQuest 5</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <div class="logo">WordQuest <span>5</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+    </div>
+  </nav>
+
+  <section class="form-section">
+    <h2>Player Login</h2>
+    <form id="playerLogin">
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button type="submit" class="btn">Login</button>
+
+    <p class="alt-link">
+        No account?
+        <a href="register.html">Click here to register</a>
+    </p>
+    </form>
+  </section>
+
+  <section id="gameArea" class="game hidden">
+    <h2>Guess the Word</h2>
+    <div id="guessGrid" class="grid"></div>
+    <form id="guessForm">
+      <input type="text" maxlength="5" pattern="[A-Z]{5}" placeholder="Enter 5 letters" required>
+      <button type="submit" class="btn">Submit Guess</button>
+    </form>
+    <p id="gameMessage"></p>
+  </section>
+</body>
+</html>

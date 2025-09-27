@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Registration - WordQuest 5</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <div class="logo">WordQuest <span>5</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+    </div>
+  </nav>
+
+  <section class="form-section">
+    <h2>User Registration</h2>
+    <form id="registerForm">
+      <input type="text" name="username" placeholder="Username (min 5 letters)" required>
+      <input type="password" name="password" placeholder="Password (min 5 chars incl $,%,*,@)" required>
+      <select name="role" required>
+        <option value="">Select Role</option>
+        <option value="PLAYER">Player</option>
+        <option value="ADMIN">Admin</option>
+      </select>
+      <button type="submit" class="btn">Register</button>
+    </form>
+  </section>
+</body>
+</html>
